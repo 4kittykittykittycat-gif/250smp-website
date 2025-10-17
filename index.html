@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TwoFiftyMC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://images.openai.com/static-rsc-1/rrEP-X-u62cfM3MayiN3GWazu7Mzm2JUgxGGJIt0nNHfzin7lZXBlBGTcRXO2VBNVaGwKjnSx1IDYYx8g5tagOaKGvvwm_7mhNIraGJVL2E0jRMyBYWUmtQolLbhH3GSIpX0OendmHQzuzuvfjILNQ');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+  }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  .chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    height: 440px;
+    background: rgba(20, 20, 20, 0.65);
+    color: #e6e6e6;
+    padding: 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+  }
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  .chatbox h2 {
+    margin-top: 0;
+    color: #79d45c;
+    text-align: center;
+  }
+
+  .chat-input {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+
+  .chat-input button {
+    background-color: #79d45c;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .chat-input button:hover {
+    background-color: #5db84a;
+  }
+</style>
 </head>
 <body>
 
-  <!-- Top header -->
-  <header class="top-header">
-    <h1>250SMP</h1>
-  </header>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a class="nav-store" href="#store">Store</a>
-    <a class="nav-ranks" href="#ranks">Ranks</a>
-    <a class="nav-info" href="#info">Info</a>
-    <a class="nav-discord" href="https://discord.gg/gBBatp2MCs" target="_blank" rel="noopener">Discord</a>
-  </nav>
-
-  <!-- Main section -->
-  <main class="main-section">
-    <h2 class="server-title">TwoFiftyMC</h2>
-    <p class="server-ip">Server IP: <strong>Coming Soon</strong></p>
-  </main>
-
-  <!-- Sections -->
-  <section id="store" class="section">
-    <h3>Store</h3>
-    <p>Coming Soon</p>
-  </section>
-
-  <section id="ranks" class="section">
-    <h3>Ranks</h3>
-    <p>Check back soon for available ranks and perks!</p>
-  </section>
-
-  <section id="info" class="section">
-    <h3>Server Info</h3>
-    <ul>
-      <li>Economy</li>
-      <li>PvP</li>
-      <li>Shops</li>
-      <li>Sell Ranks</li>
-    </ul>
-  </section>
+<div class="chatbox">
+  <h2>Chat</h2>
+  <div id="messages">
+    <p>Welcome to the chat!</p>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Type a message...">
+    <button>Send</button>
+  </div>
+</div>
 
 </body>
 </html>
