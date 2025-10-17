@@ -1,4 +1,6 @@
-/* General Reset */
+/* -------------------------
+   General Reset & Body
+------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,88 +8,120 @@
   font-family: 'Press Start 2P', monospace;
 }
 
-body {
-  background: linear-gradient(135deg, #ff4d4d, #4dffff, #4dff88);
-  color: #fff;
-  min-height: 100vh;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Top Header */
+body {
+  background: #ffffff; /* fully white background */
+  color: #001f4d; /* default text color dark blue */
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* -------------------------
+   Top Header
+------------------------- */
 .top-header {
   text-align: center;
-  padding: 20px 0;
-  font-size: 2rem;
-  text-shadow: 2px 2px 8px #000;
+  padding: 40px 20px;
+  font-size: 3rem;
 }
 
-/* Navbar */
+/* Colored letters in 250SMP */
+.top-header .blue {
+  color: #001f4d; /* dark blue */
+}
+
+.top-header .black {
+  color: #000000;
+}
+
+/* -------------------------
+   Navbar
+------------------------- */
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  top: 80px;
-  background: rgba(0,0,0,0.4);
-  z-index: 100;
+  position: sticky;
+  top: 0;
+  background: rgba(0,31,77,0.2); /* see-through dark blue */
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  border-bottom: 2px solid #001f4d; /* dark blue separator */
 }
 
 .navbar a {
   text-decoration: none;
-  font-size: 0.8rem;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: 0.3s;
-  text-shadow: 1px 1px 5px #000;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #001f4d; /* dark blue text */
 }
-
-/* Color-coded links */
-.nav-store { background-color: #a64dff; color: #fff; }
-.nav-ranks { background-color: #ff4d4d; color: #fff; }
-.nav-info { background-color: #4dff4d; color: #000; }
-.nav-discord { background-color: #4d88ff; color: #fff; }
 
 .navbar a:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px #fff;
+  color: #0040a0; /* slightly lighter blue on hover */
 }
 
-/* Main Section */
+/* -------------------------
+   Main Section
+------------------------- */
 .main-section {
   text-align: center;
-  padding: 200px 20px 100px 20px;
+  padding: 150px 20px 80px;
 }
 
 .server-title {
-  font-size: 2rem;
-  text-shadow: 3px 3px 10px #000;
-  margin-bottom: 20px;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  color: #001f4d; /* dark blue */
+  margin-bottom: 15px;
 }
 
 .server-ip {
   font-size: 1rem;
-  text-shadow: 2px 2px 5px #000;
+  color: #001f4d; /* dark blue */
+  margin-bottom: 20px;
 }
 
-/* Sections */
+/* -------------------------
+   Sections
+------------------------- */
 .section {
-  padding: 100px 20px;
+  padding: 60px 20px;
+  margin: 30px auto;
+  max-width: 900px;
   text-align: center;
-  border-top: 2px solid rgba(255,255,255,0.3);
+  background: rgba(0,31,77,0.2); /* see-through dark blue */
+  border-radius: 15px;
+  border: 2px solid #001f4d; /* dark blue border */
 }
 
 .section h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 5px #000;
+  color: #001f4d; /* dark blue */
 }
 
 .section p, .section ul {
-  font-size: 0.8rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #001f4d; /* dark blue */
 }
 
-ul {
-  list-style-type: none;
+.section ul li {
+  margin: 8px 0;
+  list-style: none;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #001f4d; /* dark blue bullets */
 }
