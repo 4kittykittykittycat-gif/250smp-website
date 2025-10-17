@@ -5,58 +5,73 @@
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Body layout */
 body {
+    display: flex;
     font-family: 'Arial', sans-serif;
-    background-color: #0b0f23; /* dark navy blue */
-    color: #ffffff;
-    line-height: 1.6;
+    background-color: #0b0f23;
+    color: #fff;
+    height: 100vh;
 }
 
-/* Header styling */
-header {
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.sidebar h1 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 40px;
     text-align: center;
-    padding: 40px 20px;
-    background-color: #000000; /* black header */
 }
 
-header h1 {
-    font-size: 3em;
-    color: #1e90ff; /* bright blue server name */
-    margin-bottom: 20px;
-}
-
-header nav ul {
+.sidebar nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
-header nav ul li a {
-    color: #ffffff;
+.sidebar nav ul li a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: #1e90ff; /* bright blue hover */
+.sidebar nav ul li a:hover {
+    color: #1e90ff;
+    text-shadow: 0 0 10px #1e90ff;
 }
 
-/* Hero Image Section */
+/* Main content */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Hero image */
 #hero img {
     width: 100%;
-    max-height: 600px;
+    height: 600px;
     object-fit: cover;
 }
 
-/* Info Section */
+/* Info section */
 #info {
     padding: 60px 20px;
     text-align: center;
-    background-color: #10183f; /* dark blue background */
+    background-color: #10183f;
 }
 
 #info h2 {
@@ -68,11 +83,4 @@ header nav ul li a:hover {
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000; /* black footer */
 }
