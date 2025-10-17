@@ -1,93 +1,84 @@
-/* General Reset */
+/* Reset default margin and padding */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Press Start 2P', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body styling */
 body {
-  background: linear-gradient(135deg, #ff4d4d, #4dffff, #4dff88);
-  color: #fff;
-  min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0f23; /* dark navy blue */
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Top Header */
-.top-header {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 2rem;
-  text-shadow: 2px 2px 8px #000;
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000; /* black header */
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  top: 80px;
-  background: rgba(0,0,0,0.4);
-  z-index: 100;
+header .logo h1 {
+    color: #1e90ff; /* bright blue server name */
 }
 
-.navbar a {
-  text-decoration: none;
-  font-size: 0.8rem;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: 0.3s;
-  text-shadow: 1px 1px 5px #000;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Color-coded links */
-.nav-store { background-color: #a64dff; color: #fff; }
-.nav-ranks { background-color: #ff4d4d; color: #fff; }
-.nav-info { background-color: #4dff4d; color: #000; }
-.nav-discord { background-color: #4d88ff; color: #fff; }
-
-.navbar a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #fff;
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
 }
 
-/* Main Section */
-.main-section {
-  text-align: center;
-  padding: 200px 20px 100px 20px;
+nav ul li a:hover {
+    color: #1e90ff; /* bright blue hover */
 }
 
-.server-title {
-  font-size: 2rem;
-  text-shadow: 3px 3px 10px #000;
-  margin-bottom: 20px;
+/* Section styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.server-ip {
-  font-size: 1rem;
-  text-shadow: 2px 2px 5px #000;
+section#home {
+    background-color: #0c122f; /* slightly lighter dark blue */
 }
 
-/* Sections */
-.section {
-  padding: 100px 20px;
-  text-align: center;
-  border-top: 2px solid rgba(255,255,255,0.3);
+section#play, section#store {
+    background-color: #10183f; /* darker blue */
 }
 
-.section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px #000;
+/* Buttons/links */
+section a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #1e90ff; /* bright blue button */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.section p, .section ul {
-  font-size: 0.8rem;
-  line-height: 1.5;
+section a:hover {
+    background-color: #63b3ff; /* lighter blue on hover */
+    box-shadow: 0 0 15px #1e90ff;
 }
 
-ul {
-  list-style-type: none;
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000; /* black footer */
 }
