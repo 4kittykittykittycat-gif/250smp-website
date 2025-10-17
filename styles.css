@@ -9,13 +9,14 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #0b0f23; /* dark navy blue */
-    color: #fff;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
 /* Header styling */
 header {
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px;
     background-color: #000000; /* black header */
 }
 
@@ -33,7 +34,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -67,4 +68,11 @@ header nav ul li a:hover {
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000; /* black footer */
 }
